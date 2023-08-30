@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+app-nav {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+}
+#body {
+  position: relative;
+  min-height: calc(100% - var(--nav-height));
+  background-color: hsl(286, 50%, 95%);
+  overflow-x: hidden;
+}
+#container {
+  width: 100%;
+  min-height: 100%;
+}
+app-footer {
+  display: block;
+  background-color: white;
+}

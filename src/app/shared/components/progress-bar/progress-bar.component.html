@@ -1,0 +1,10 @@
+<div id="bar2" class="bar">
+  <div id="progressMax">
+    <div id="progress" #progress></div>
+  </div>
+</div>
+<div id="bar1" class="bar">
+  <ng-container *ngFor="let val of max | createArray; index as index">
+    <div [id]="'point' + index" class="point" [class.active]="index < position"></div>
+  </ng-container>
+</div>

@@ -1,0 +1,23 @@
+.filter {
+  width: fit-content;
+  height: fit-content;
+  animation: animateOpacity 1s, animateClipping 1s;
+  white-space: nowrap;
+}
+
+@keyframes animateOpacity {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes animateClipping {
+  0% {
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}

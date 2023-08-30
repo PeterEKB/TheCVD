@@ -1,0 +1,74 @@
+#container {
+  display: grid;
+  grid-template-columns: 1fr max(950px) 1fr;
+  padding: 0 0 10px;
+}
+#content {
+  grid-column: 2/3;
+  display: grid;
+  grid-template:
+    ". . new"
+    "social contact poster"
+    "subscribe subscribe poster"
+    "credit credit poster" 1rem/ 1fr 1fr 1fr;
+}
+#social {
+  grid-area: social;
+}
+#contact {
+  grid-area: contact;
+}
+#subscribe {
+  grid-area: subscribe;
+}
+#new {
+  grid-area: new;
+  padding: 10px 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+#poster {
+  grid-area: poster;
+  background-color: var(--cta-green-pear);
+  width: 80%;
+  padding: 15px;
+  margin: auto;
+  font-size: 0;
+}
+#poster img {
+  width: 100%;
+}
+#credit {
+  grid-area: credit;
+}
+#contact,
+#social,
+#subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.group {
+  display: flex;
+  gap: 10px;
+}
+.title {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+label {
+  text-transform: uppercase;
+  color: var(--cta-purple);
+}
+#subInput {
+  flex: 1;
+  padding: 10px;
+  border: 4px solid var(--cta-purple);
+  box-shadow: 1px 1px 4px hsla(0, 0%, 0%, .3);
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 300ms;
+}
+#subInput:active, #subInput:focus {
+  border-color: var(--cta-green-pear);
+}

@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  width: 50%;
+  height: 100%;
+  max-width: 900px;
+  margin: auto;
+  color: var(--cta-purple);
+  text-align: justify;
+}
+h1 {
+  color: var(--cta-purple);
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 900;
+}
+#body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#startButton {
+  margin: 0 auto;
+}

@@ -1,0 +1,23 @@
+<div id="container">
+  <div id="title">{{ "doulas" | uppercase }}</div>
+  <div id="seperator"></div>
+  <div id="dynamicCon">
+    <div id="filter">
+      <span id="filterTitle">Location Filter</span>
+      <div (click)="handleCardVisibility('all')" class="filterPuck">{{showAllActive?'hide all':'show all'}}</div>
+      <ng-container *ngFor="let location of locations">
+        <div (click)="handleCardVisibility(location)" class="filterPuck" [class.active]="showCard[location]">{{ location }}</div>
+      </ng-container>
+    </div>
+    <div id="list">
+      <ng-container *ngFor="let card of listOfDoulas">
+        <app-card
+          [data]="card"
+          [routerLink]="'../form/'+card.id"
+          class="card"
+          *ngIf="checkCardVisibility(card.id)"
+        ></app-card>
+      </ng-container>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div id="image">
+  <img
+    [src]="
+      data.image ||
+      'https://th.bing.com/th/id/R.21f843af92566b963fcdfb6bc8ee164f?rik=uHD1oQLoWJRsGg&riu=http%3a%2f%2fgetdrawings.com%2fimg%2ffront-face-silhouette-30.jpg&ehk=%2fpojOgQdAkuB8RnI4IPHHQB7tfczW9nZdSt3pjsUpG0%3d&risl=&pid=ImgRaw&r=0'
+    "
+    alt="Image of Doula"
+    center="all"
+  />
+</div>
+<div #details id="details">
+  <div #mainDetails id="mainDetails">
+    <div #locations id="locations">
+      <span class="title">{{ "Areas I serve:" | titlecase }}</span>
+      <div #locationsList id="locationsList">
+        <ng-container *ngFor="let location of data.locations">
+          <span class="location">{{ location }}</span>
+        </ng-container>
+        <ng-container *ngIf="ellipsis">
+          <div id="ellipsis">...(Others)</div>
+        </ng-container>
+      </div>
+    </div>
+    <div id="doulaName">
+      <h3>
+        {{ data.name.prefix ? data.name.prefix + "." : "" }}
+        {{ data.name.first }} {{ data.name.last[0] }}.
+      </h3>
+    </div>
+    <button id="more" (click)="toggle($event)">more</button>
+  </div>
+
+  <div #extra id="moreDetails">
+    {{ data.moreInfo }}
+  </div>
+</div>

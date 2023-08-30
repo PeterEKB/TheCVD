@@ -1,0 +1,66 @@
+#banner {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 0.6fr);
+  height: 100%;
+}
+#upper {
+  grid-row: 1/2;
+  position: relative;
+  overflow: hidden;
+}
+#upper video {
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+#dynamicText {
+  font-size: 7rem;
+  color: white;
+  font-weight: 900;
+}
+#donateBtn {
+  bottom: 2.5rem;
+}
+#lower {
+  grid-row: 2/3;
+  display: flex;
+  position: relative;
+}
+#col1 {
+  background-color: #9bb49f;
+  color: white;
+}
+#col2 {
+  background-color: #6b4575;
+  color: #c2e1c7;
+}
+#col3 {
+  background-color: #053f4533;
+  color: var(--cta-green-dark);
+}
+#col4 {
+  background-color: #6b45754d;
+  color: #6b4575;
+}
+.columns {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.columns .imageCon {
+  opacity: 0.3;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.columns .imageCon img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  min-height: 100%;
+  min-height: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}

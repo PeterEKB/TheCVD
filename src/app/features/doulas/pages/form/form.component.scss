@@ -1,0 +1,89 @@
+#content {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 5rem 0;
+  overflow: hidden;
+}
+app-progress-bar {
+  width: calc(100% / 2);
+  align-self: center;
+}
+#container {
+  flex: 1;
+  display: flex;
+  width: max-content;
+  transition: transform 300ms;
+  overflow: hidden;
+}
+.slide {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+.formCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 60rem;
+  max-height: 90%;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px hsla(0, 0%, 0%, 30%);
+  line-height: 2rem;
+  overflow: hidden;
+}
+.formHeader {
+  width: 80%;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid hsl(0, 0%, 90%);
+  text-align: center;
+  font-size: 2rem;
+   font-weight: 900;
+}
+.formBody {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+#agreement {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: 1rem;
+}
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 1rem 1rem 1rem;
+}
+.cta:not(#agreement + .cta) {
+  padding: 3rem 1rem 1rem;
+}
+#slide1 .formCard .formContent {
+  text-align: justify;
+}
+
+#users {
+  display: flex;
+  height: 5rem;
+}
+.user {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.userPuck {
+  width: 100%;
+  aspect-ratio: 1;
+  border: 1px solid hsl(0, 0%, 70%);
+  border-radius: 10rem;
+}

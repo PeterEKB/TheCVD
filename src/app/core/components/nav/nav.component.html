@@ -1,0 +1,35 @@
+<nav class="poppins">
+  <div id="left">
+    <a routerLink="home" class="link">
+      <div id="logo">
+        <app-logo></app-logo>
+      </div>
+    </a>
+  </div>
+  <div id="center">
+    <div id="links">
+      <a
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="link"
+        >Home</a
+      >
+      <a routerLink="doulas" routerLinkActive="active" class="link"
+        >Find a Doula</a
+      >
+      <a routerLink="about" routerLinkActive="active" class="link">About</a>
+      <a routerLink="contact" routerLinkActive="active" class="link"
+        >Contact Us</a
+      >
+    </div>
+  </div>
+  <div id="right">
+    <button id="navProfile" routerLink="login">
+      <div id="profImg">
+        <span class="material-symbols-outlined icon" center="all"> person </span>
+      </div>
+      <span id="loginTxt">Log In</span>
+    </button>
+  </div>
+</nav>

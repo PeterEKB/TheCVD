@@ -1,0 +1,12 @@
+<span #textOutput id="text">
+  <ng-container *ngIf="textAlternateIndex === 0">
+    <span class="filter">
+      <span>{{text[textIndex]}}</span>
+    </span>
+  </ng-container>
+  <ng-container *ngIf="textAlternateIndex === 1">
+    <span class="filter">
+      <span>{{text[textIndex]}}</span>
+    </span>
+  </ng-container>
+</span>

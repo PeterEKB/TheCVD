@@ -1,0 +1,101 @@
+:host {
+  --host-bg-color: white;
+
+  display: block;
+  position: relative;
+  width: clamp(300px, 100%, 500px);
+  height: min-content;
+  padding: 8px 8px 0;
+  background-color: var(--host-bg-color);
+  border-bottom: 0;
+  border-radius: 5px;
+  margin: 7px;
+  box-shadow: 1px 1px 4px hsl(0, 0%, 0%, 0.4);
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+  
+  * {
+    pointer-events: none;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+  }
+}
+:host:hover:not(#more) {
+  --host-bg-color: var(--cta-green-2);
+}
+:host:hover:not(#more) #image img {
+  transition-duration: 500ms;
+  scale: 1.03;
+}
+#image {
+  position: relative;
+  aspect-ratio: 1.4;
+  width: 100%;
+  background-color: hsl(0, 0%, 95%);
+  border: 1px solid hsl(0, 0%, 70%);
+  overflow: hidden;
+}
+#image img {
+  min-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: left top;
+}
+#details {
+  background-color: var(--host-bg-color);
+  overflow: hidden;
+}
+#more {
+  display: block;
+  margin: 0 auto;
+  padding: .5rem 2rem;
+  border: 1px solid hsl(0, 0%, 80%);
+  pointer-events: all;
+  cursor: pointer;
+}
+#mainDetails {
+  padding: 1rem 0;
+}
+#locations,
+#locationsList {
+  display: flex;
+  align-content: flex-start;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+#locations {
+  position: relative;
+  gap: .5rem;
+  height: 2rem;
+  margin-bottom: 10px;
+  overflow: hidden;
+  color: var(--cta-purple-light);
+}
+.title {
+  color: var(--cta-purple);
+  font-weight: 700;
+}
+#locationsList {
+  flex-wrap: wrap;
+  gap: 0 0.4rem;
+  height: fit-content;
+}
+.location {
+  height: fit-content;
+  line-height: 1rem;
+}
+.location:not(:last-child):after {
+  content: ",";
+}
+#ellipsis {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--host-bg-color);
+}
+#doulaName {
+  text-transform: capitalize;
+}

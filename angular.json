@@ -71,6 +71,11 @@
               "browserTarget": "TheCVD:build:development"
             }
           },
+          "options": {
+            "host": "0.0.0.0",
+            "port": 4200,
+            "proxyConfig": "src/proxy.conf.json"
+          },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
@@ -100,5 +105,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "ff551f1b-dc03-499b-8a94-a4a357bb55d1"
   }
 }
